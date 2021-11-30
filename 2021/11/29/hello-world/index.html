@@ -5,9 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Hello World, HTML,CSS,JavaScript,JQuery,java,linux">
-    <meta name="description" content="发生的方式的方式擦擦赛达尔1
-大大声道
-">
+    <meta name="description" content="标识符1、标识符的使用:1.1、标识符:凡是自己可以起名字的地方都叫标识符。
+
+比如:类名、变量名、方法名、接口名、包名…    
+
+1.2、标识符的命名规则: –&amp;gt; 如果不遵守如下的规则，编译不通过!。需要大家严格遵守
+
+由26个英">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -480,9 +484,158 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="发生的方式的方式擦擦赛达尔"><a href="#发生的方式的方式擦擦赛达尔" class="headerlink" title="发生的方式的方式擦擦赛达尔"></a>发生的方式的方式擦擦赛达尔</h1><p>1</p>
-<p>大大声道</p>
+                <h1 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h1><h2 id="1、标识符的使用"><a href="#1、标识符的使用" class="headerlink" title="1、标识符的使用:"></a>1、标识符的使用:</h2><p>1.1、标识符:凡是自己可以起名字的地方都叫标识符。</p>
+<ul>
+<li>比如:类名、变量名、方法名、接口名、包名…    </li>
+</ul>
+<p>1.2、标识符的命名规则: –&gt; 如果不遵守如下的规则，编译不通过!。需要大家严格遵守</p>
+<ul>
+<li>由26个英文字母大小写，0-9，或$组成</li>
+<li>数字不可以开头。</li>
+<li>不可以使用关键字和保留字，但能包含关键字和保留字。</li>
+<li>Java中严格区分大小写，长度无限制。</li>
+<li>标识符不能包含空格。</li>
+</ul>
+<p>1.3、Java中 的名称命名规范:</p>
+<ul>
+<li><strong>包名:</strong> 多单词组成时所有字母都小写: xxyyzz。</li>
+<li>**类名、接口香:**多单词组成时，所有单词的首字母大写: XxxYyyZzz</li>
+<li><strong>变量名、方法名</strong>:多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写: xxxYyyZzz </li>
+<li><strong>常量名:</strong> 所有字母都大写。多单词时每个单词用下划线连接: XXX_ YYY_ ZZZ。</li>
+</ul>
+<p>1.4、注意</p>
+<ul>
+<li>注意1:在起名字时，为了提高阅读性，要尽量有意义，“见名知意”</li>
+<li>注意2: java采用unicode字符集， 因此标识符也可以使用汉字声明，但是不建议使用。</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> 学生<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>学生<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="2、变量的使用"><a href="#2、变量的使用" class="headerlink" title="2、变量的使用"></a>2、变量的使用</h2><h3 id="2-1、变量定义"><a href="#2-1、变量定义" class="headerlink" title="2.1、变量定义"></a>2.1、变量定义</h3><p>java定义变量的格式:数据类型变量名=变量值;</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> age<span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//定义变量</span>
+String name<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//变量声明</span>
+name<span class="token operator">=</span><span class="token string">"123"</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//变量赋值</span>
+</code></pre>
+<h3 id="2-2、变量说明"><a href="#2-2、变量说明" class="headerlink" title="2.2、变量说明:"></a>2.2、变量说明:</h3><p>①变量必须先声明，后使用<br>②变量都定义在其作用域内。在作用域内，它是有效的。换句话说，出了作用域，就失效了<br>③同一个作用域内{}，不可以声明两个同名的变量</p>
+<h3 id="2-3、变量的分类-按数据类型"><a href="#2-3、变量的分类-按数据类型" class="headerlink" title="2.3、变量的分类-按数据类型"></a>2.3、变量的分类-按数据类型</h3><p><img src="C:\Users\XS114\AppData\Roaming\Typora\typora-user-images\image-20210528160427771.png" alt="image-20210528160427771"></p>
+<p>基本数据类型：</p>
+<ul>
+<li>整型： byte  \   short  \   int  \  long </li>
+<li>浮点型： float  \ double</li>
+<li>字符型： char</li>
+<li>布尔型： boolean</li>
+</ul>
+<p>引用数据类型：</p>
+<ul>
+<li>类（class）</li>
+<li>接口（interface）</li>
+<li>数组（array）</li>
+</ul>
+<h4 id="2-3-1、整型：-byte-、-short、int、long"><a href="#2-3-1、整型：-byte-、-short、int、long" class="headerlink" title="2.3.1、整型： byte 、 short、int、long"></a>2.3.1、整型： byte 、 short、int、long</h4><p>java的整型常量默认为int型，声明long型常量须后加‘I或‘L’</p>
+<p>java程序中变量通常声明为int型，除非不足以表示较大的数，才使用long</p>
+<p><img src="C:\Users\XS114\AppData\Roaming\Typora\typora-user-images\image-20210528161846088.png" alt="image-20210528161846088"></p>
+<p>500MB 1MB = 1024KB 1KB= 1024B B= byte ? bit?</p>
+<p>bit:计算机中的最小存储单位。byte:计算机中基本存储单元。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">byte</span> b1<span class="token operator">=</span><span class="token number">127</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//  127   数值在-128~127之间   </span>
+<span class="token keyword">short</span> s1<span class="token operator">=</span><span class="token number">1315</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 1315</span>
+<span class="token keyword">int</span> t1<span class="token operator">=</span><span class="token number">123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 123</span>
+<span class="token keyword">long</span> l1<span class="token operator">=</span><span class="token number">123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//  123  数值小于int的范围可以不加L</span>
+<span class="token keyword">long</span> l2<span class="token operator">=</span><span class="token number">12300000000</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//报错  默认为int型 int型取值约为21亿</span>
+<span class="token keyword">long</span> l3<span class="token operator">=</span>12300000000L<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//12300000000 数值大于int范围后面加L</span>
+</code></pre>
+<h4 id="2-3-2、浮点型：-float、double"><a href="#2-3-2、浮点型：-float、double" class="headerlink" title="2.3.2、浮点型： float、double"></a>2.3.2、浮点型： float、double</h4><p>float:单精度， 尾数可以精确到7位有效数字。很多情况下，精度很难满足需求。</p>
+<p>double:双精度， 精度是float的两倍。通常采用此类型。</p>
+<p>Java的浮点型常量默认为double型， 声明float型常量， 须后加‘f或‘F’。</p>
+<p><img src="C:\Users\XS114\AppData\Roaming\Typora\typora-user-images\image-20210528162855456.png" alt="image-20210528162855456"></p>
+<p>float虽然和int都是4个字节，但是float的表数范围比long还要大。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">double</span> d1 <span class="token operator">=</span> <span class="token number">123.4</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d1<span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输出 124.4</span>
 
+<span class="token keyword">float</span> f1 <span class="token operator">=</span> <span class="token number">123.4</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//默认为double型，double-->float 大-->小</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>f1<span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//不兼容的类型:从double转换到float可能会有损失</span>
+<span class="token keyword">float</span> f1 <span class="token operator">=</span> <span class="token number">123.4f</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>f1<span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输出 124.4</span>
+</code></pre>
+<h4 id="2-3-3、字符型：char（一个字符：2bits）一个字符两个字节。"><a href="#2-3-3、字符型：char（一个字符：2bits）一个字符两个字节。" class="headerlink" title="2.3.3、字符型：char（一个字符：2bits）一个字符两个字节。"></a>2.3.3、字符型：char（一个字符：2bits）一个字符两个字节。</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//定义char型变量，通常使用一对'',内部只能写一个字符</span>
+<span class="token keyword">char</span> a1 <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span>
+<span class="token keyword">char</span> a2 <span class="token operator">=</span> <span class="token string">'1'</span><span class="token punctuation">;</span>
+<span class="token keyword">char</span> a3 <span class="token operator">=</span> <span class="token string">'中'</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// a</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a2<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 1</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a3<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 中</span>
+<span class="token keyword">char</span> c1 <span class="token operator">=</span> <span class="token string">'aa'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//编译报错  内部只能写一个字符</span>
+<span class="token keyword">char</span> c2 <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//编译报错  内部只能写一个字符</span>
+<span class="token comment" spellcheck="true">//1.声明一个字符2.转义字符3.直接使用Unicode值来表示字符型常量</span>
+<span class="token keyword">char</span> a5 <span class="token operator">=</span> <span class="token string">'\n'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//换行符</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"aaa"</span><span class="token operator">+</span>a5<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//换行</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"bbb"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">char</span> a6 <span class="token operator">=</span> <span class="token string">'\u0043'</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a6<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输出: C</span>
+</code></pre>
+<h4 id="2-3-4、布尔型：boolean"><a href="#2-3-4、布尔型：boolean" class="headerlink" title="2.3.4、布尔型：boolean"></a>2.3.4、布尔型：boolean</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 只能两个值之一: true 、false</span>
+<span class="token comment" spellcheck="true">//</span>
+<span class="token keyword">boolean</span> b1<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输出： true；</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>b1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"shut"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token comment" spellcheck="true">//输出: shut</span>
+</code></pre>
+<h3 id="2-4、数据类型转换"><a href="#2-4、数据类型转换" class="headerlink" title="2.4、数据类型转换"></a>2.4、数据类型转换</h3><p>基本数据类型之间的运算规则:</p>
+<p>前提:这里讨论只是7种基本数据类型变量间的运算。不包含boolean类型的。</p>
+<p>说明:此时的容量大小指的是，表示数的范围的大和小。比如: float容量要大于long的容量</p>
+<p>自动类型提升:</p>
+<ul>
+<li>结论:当容量小的数据类型的变量与容量大的数据类型的变量做运算时，结果自动提升    为容量大的数据类型。</li>
+<li>byte、char 、short –&gt; int –&gt; long –&gt; float –&gt; double</li>
+<li>特别的:当byte、 char、 short三种类型 的变量做运算时，结果为int型。</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">byte</span> b1 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">short</span> s1 <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> t1 <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//byte num01=b1+b1;</span>
+<span class="token comment" spellcheck="true">//short num02=b1+s2; 编译不通过 接受必须为int类型</span>
+<span class="token keyword">int</span> num <span class="token operator">=</span> b1<span class="token operator">+</span>s1<span class="token operator">+</span>t1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//6</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//6</span>
+
+<span class="token keyword">long</span> l1 <span class="token operator">=</span> t1<span class="token operator">+</span>s1<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//5</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>l1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//5</span>
+
+<span class="token keyword">float</span> f1<span class="token operator">=</span>l1<span class="token operator">+</span>t1<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//转换为float型</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>f1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 8.0</span>
+        
+<span class="token keyword">double</span> d1<span class="token operator">=</span>l1<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//转换为double型</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 5.0</span>
+
+<span class="token keyword">char</span> c1 <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//</span>
+<span class="token comment" spellcheck="true">//short nu = s1+c1; 编译出错</span>
+<span class="token keyword">int</span> num02<span class="token operator">=</span>t1<span class="token operator">+</span>c1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3+97 =100</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num02<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 100</span>
+</code></pre>
+<p>强制类型转换: 自动类型提升运算的逆运算。</p>
+<ul>
+<li>需要使用强转符:（）；</li>
+<li>注意点:强制类型转换，可能导致精度损失。</li>
+</ul>
+<pre class=" language-Java"><code class="language-Java">//精度损失
+double d1 = 12.9;
+int t1 = (int)d1;//截断操作
+System.out.println(t1);// 输出 :12
+//没有精度损失
+long l1=123;
+short s1=(short) l1;
+System.out.println(s1);// 输出: 123
+</code></pre>
+<h3 id="2-5、字符串类型：String"><a href="#2-5、字符串类型：String" class="headerlink" title="2.5、字符串类型：String"></a>2.5、字符串类型：String</h3><p>String不是基本数据类型，属于引用数据类型.</p>
+<p>使用方式与基本数据类型一致。例如: String str =“abcd”;</p>
+<p>一个字符串可以串接另一个字符串，也可以直接串接其他类型的数据。</p>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//1.String属于引用数据类型, 翻译为:字符串//2.声明String类型变量时，使用一对""//3.String可以和8种基本数据类型变量做运算，且运算只能是连接运算: +//4.运算的结果仍然是String类型String str01 = "Spring";String str02 = "a";String str03 = "";System.out.println(str01);//输出: Springint number = 1001;String strId = "学号:";String info01 = strId+number;//连接运算System.out.println(info01);//输出: 学号:1001boolean b1 = true;String info02 = info01+b1;//连接运算System.out.println(info02);//输出: 学号:1001true</span>
+</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//练习1char c = 'a';//97int num = 10;String str = "hello";System.out.println(c+num+str);// 107hello 先 c 和 num 运算的107 在和str运算System.out.println(c+str+num);// ahello10System.out.println(c+(num+str));// a10helloSystem.out.println((c+num)+str);// 107helloSystem.out.println(str+num+c);// hello10a</span>
+</code></pre>
+<h2 id="3、流程结构"><a href="#3、流程结构" class="headerlink" title="3、流程结构"></a>3、流程结构</h2>
                 
             </div>
             <hr/>
