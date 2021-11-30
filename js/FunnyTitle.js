@@ -3,12 +3,12 @@ var OriginTitle = document.title;
  document.addEventListener('visibilitychange', function () {
      if (document.hidden) {
          $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/guixinchn/image/blog/favicon.png");
-         document.title = '�������㻹������ģ�';
+         document.title = '我相信你还会回来的';
          clearTimeout(titleTime);
      }
      else {
          $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/guixinchn/image/blog/favicon.png");
-         document.title = '��ӭ�����ҵ����磡' + OriginTitle;
+         document.title = '欢迎来到我的世界' + OriginTitle;
          titleTime = setTimeout(function () {
              document.title = OriginTitle;
          }, 2000);
