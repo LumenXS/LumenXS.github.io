@@ -1465,7 +1465,7 @@ MYISAM存储引擎下，<span class="token function">COUNT</span><span class="to
 </code></pre>
 <h4 id="3、库的删除"><a href="#3、库的删除" class="headerlink" title="3、库的删除"></a>3、库的删除</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">database</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> aaabook<span class="token punctuation">;</span>
 </code></pre>
-<h3 id="二-表的管理"><a href="#二-表的管理" class="headerlink" title="二 .表的管理"></a>二 .表的管理</h3><h4 id="1-表的创建"><a href="#1-表的创建" class="headerlink" title="1.表的创建"></a>1.表的创建</h4><p><strong>语法</strong><br><strong>create table 表名(</strong><br>            <strong>列名  列的类型 【(长度) 约束】,</strong><br>            <strong>列名  列的类型 【(长度) 约束】,</strong><br>            <strong>列名  列的类型 【(长度) 约束】,</strong><br>            <strong>…</strong><br>            <strong>列名  列的类型 【(长度) 约束】</strong><br><strong>);</strong></p>
+<h3 id="二-表的管理"><a href="#二-表的管理" class="headerlink" title="二.表的管理"></a>二.表的管理</h3><h4 id="1-表的创建"><a href="#1-表的创建" class="headerlink" title="1.表的创建"></a>1.表的创建</h4><p><strong>语法</strong><br><strong>create table 表名(</strong><br>            <strong>列名  列的类型 【(长度) 约束】,</strong><br>            <strong>列名  列的类型 【(长度) 约束】,</strong><br>            <strong>列名  列的类型 【(长度) 约束】,</strong><br>            <strong>…</strong><br>            <strong>列名  列的类型 【(长度) 约束】</strong><br><strong>);</strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#案例:创建表book</span>
 <span class="token keyword">use</span> aaabook<span class="token punctuation">;</span>
 <span class="token keyword">create</span> <span class="token keyword">table</span> book<span class="token punctuation">(</span>
@@ -1536,7 +1536,7 @@ MYISAM存储引擎下，<span class="token function">COUNT</span><span class="to
 <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> copy3<span class="token punctuation">;</span>
 </code></pre>
 <h3 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h3><p>含义：一种限制，用于限制表中的数据，为了保证表中的数据的准确和可靠性</p>
-<p>分类:    六大约束<br>        NOT NULL: 非空，用于保证该字段的值不能为空,比如姓名、学号等<br>        DEFAULT:默认，用于保证该字段有默认值,比如性别<br>        PRIMARY KEY:主键，用于保证该字段的值具有唯一性，并且非空 比如学号、员工编号等<br>        UNIQUE:唯一，用于保证该字段的值具有唯一性，可以为空 比如座位号<br>        CHECK:检查约束[mysql中不支持] 比如年龄、性别<br>        FOREIGN KEY:外键，用于限制两个表的关系，用于保证该字段的值必须来自于主表的关联列的值</p>
+<p><strong>分类:    六大约束</strong><br>    <strong>NOT NULL: 非空，用于保证该字段的值不能为空,比如姓名、学号等</strong><br>    <strong>DEFAULT:默认，用于保证该字段有默认值,比如性别</strong><br>    <strong>PRIMARY KEY:主键，用于保证该字段的值具有唯一性，并且非空 比如学号、员工编号等</strong><br>    <strong>UNIQUE:唯一，用于保证该字段的值具有唯一性，可以为空 比如座位号</strong><br>    <strong>CHECK:检查约束[mysql中不支持] 比如年龄、性别</strong><br>    <strong>FOREIGN KEY:外键，用于限制两个表的关系，用于保证该字段的值必须来自于主表的关联列的值</strong></p>
 <table>
 <thead>
 <tr>
@@ -1562,7 +1562,10 @@ MYISAM存储引擎下，<span class="token function">COUNT</span><span class="to
 <td align="center">√</td>
 </tr>
 </tbody></table>
-<p>添加约束的时机:<br>    1.创建表时<br>    2.修改表时<br>约束的添加分类:<br>    列级约束:<br>        六大约束语法_上都支持，但外键约束没有效果<br>    表级约束:<br>        除了非空、默认，其他的都支持</p>
+<p>添加约束的时机:<br>    1.创建表时<br>    2.修改表时</p>
+<p>约束的添加分类:</p>
+<p>​    列级约束:<br>​        六大约束语法_上都支持，但外键约束没有效果</p>
+<p>​    表级约束:<br>​        除了非空、默认，其他的都支持</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> 表名<span class="token punctuation">(</span>
     字段名 字段类型 列级约束<span class="token punctuation">,</span>
     字段名 字段类型<span class="token punctuation">,</span>
