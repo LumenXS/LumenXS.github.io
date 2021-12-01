@@ -1108,9 +1108,9 @@ MYISAM存储引擎下，<span class="token function">COUNT</span><span class="to
 <span class="token keyword">on</span> <span class="token number">e</span><span class="token punctuation">.</span>manager_id<span class="token operator">=</span>em<span class="token punctuation">.</span>employee_id
 <span class="token keyword">where</span> <span class="token number">e</span><span class="token punctuation">.</span>last_name <span class="token operator">like</span> <span class="token string">'%k%'</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="2、外连接"><a href="#2、外连接" class="headerlink" title="2、外连接"></a>2、外连接</h4><h5 id="a、左外连接"><a href="#a、左外连接" class="headerlink" title="a、左外连接"></a>a、左外连接</h5><img src="C:\Users\XS114\AppData\Roaming\Typora\typora-user-images\image-20211117170327266.png" alt="image-20211117170327266">
+<h4 id="2、外连接"><a href="#2、外连接" class="headerlink" title="2、外连接"></a>2、外连接</h4><h5 id="a、左外连接"><a href="#a、左外连接" class="headerlink" title="a、左外连接"></a>a、左外连接</h5><img src="MySQL笔记/image-20211117170327266.png" alt="image-20211117170327266">
 
-<h5 id="b、右外连接"><a href="#b、右外连接" class="headerlink" title="b、右外连接"></a>b、右外连接</h5><p><img src="C:\Users\XS114\AppData\Roaming\Typora\typora-user-images\image-20211117170420078.png" alt="image-20211117170420078"></p>
+<h5 id="b、右外连接"><a href="#b、右外连接" class="headerlink" title="b、右外连接"></a>b、右外连接</h5><p><img src="MySQL%E7%AC%94%E8%AE%B0/image-20211117170420078.png" alt="image-20211117170420078"></p>
 <p>应用场景:用于查询一个表中有，另一个表没有的记录<br>特点:<br>1、外连接的查询结果为主表中的所有记录<br>        如果从表中有和它匹配的，则显示匹配的值<br>        如果从表中没有和它匹配的，则显示null<br>        外连接查询结果=内连接结果+主表中有而从表没有的记录<br>2、左外连接，left join左边的是主表<br>     右外连接，right join右边的是主表<br>3、左外和右外交换两个表的顺序，可以实现同样的效果<br>4、全外连接=内连接的结果+表1中有但表2没有的+表2中有但表1没有的</p>
 <pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">#引入:查询男朋友不在男神表的的女神名</span>
 <span class="token comment" spellcheck="true">#左外连接</span>
