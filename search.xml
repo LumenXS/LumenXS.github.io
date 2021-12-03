@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>传参方式</title>
+      <link href="/2021/12/03/RequestParam/"/>
+      <url>/2021/12/03/RequestParam/</url>
+      
+        <content type="html"><![CDATA[<p>@RequestParam</p><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// http://localhost:8080/delete?id=5</span><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/delete"</span><span class="token punctuation">,</span>method <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>RequestMethod<span class="token punctuation">.</span>GET<span class="token punctuation">,</span>RequestMethod<span class="token punctuation">.</span>POST<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token keyword">public</span> Boolean <span class="token function">DeleteStuinfo</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>     <span class="token keyword">return</span> stuinfoService<span class="token punctuation">.</span><span class="token function">deleteStuinfo</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre><p>@PathVariable</p><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// http://localhost:8080/delete/4</span><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/delete/&amp;#123;id&amp;#125;"</span><span class="token punctuation">,</span>method <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>RequestMethod<span class="token punctuation">.</span>GET<span class="token punctuation">,</span>RequestMethod<span class="token punctuation">.</span>POST<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token keyword">public</span> Boolean <span class="token function">DeleteStuinfo</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> stuinfoService<span class="token punctuation">.</span><span class="token function">deleteStuinfo</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL笔记</title>
       <link href="/2021/12/01/MySQL%E7%AC%94%E8%AE%B0/"/>
       <url>/2021/12/01/MySQL%E7%AC%94%E8%AE%B0/</url>
