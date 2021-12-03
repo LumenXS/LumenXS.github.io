@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>传参方式</title>
-      <link href="/2021/12/03/@RequestParam%20%E5%92%8C%20@PathVariable%20/"/>
-      <url>/2021/12/03/@RequestParam%20%E5%92%8C%20@PathVariable%20/</url>
-      
-        <content type="html"><![CDATA[<h1 id="RequestParam-和-PathVariable区别"><a href="#RequestParam-和-PathVariable区别" class="headerlink" title="@RequestParam 和 @PathVariable区别"></a>@RequestParam 和 @PathVariable区别</h1><p><strong>@RequestParam 和 @PathVariable注解是用于从request中接收请求的，两个都可以接收参数，关键点不同的是@RequestParam是request里面拿取值，而 @PathVariable是从一个URI模板里面来填充</strong></p><p><strong>@RequestParam</strong></p><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// http://localhost:8080/delete?id=5</span><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/delete"</span><span class="token punctuation">,</span>method <span class="token operator">=</span> <span class="token punctuation">{</span>RequestMethod<span class="token punctuation">.</span>GET<span class="token punctuation">,</span>RequestMethod<span class="token punctuation">.</span>POST<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token keyword">public</span> Boolean <span class="token function">DeleteStuinfo</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token punctuation">{</span>     <span class="token keyword">return</span> stuinfoService<span class="token punctuation">.</span><span class="token function">deleteStuinfo</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><p><strong>@PathVariable</strong></p><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// http://localhost:8080/delete/4</span><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/delete/{id}"</span><span class="token punctuation">,</span>method <span class="token operator">=</span> <span class="token punctuation">{</span>RequestMethod<span class="token punctuation">.</span>GET<span class="token punctuation">,</span>RequestMethod<span class="token punctuation">.</span>POST<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token keyword">public</span> Boolean <span class="token function">DeleteStuinfo</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">return</span> stuinfoService<span class="token punctuation">.</span><span class="token function">deleteStuinfo</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> spring注解 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MySQL笔记</title>
       <link href="/2021/12/01/MySQL%E7%AC%94%E8%AE%B0/"/>
       <url>/2021/12/01/MySQL%E7%AC%94%E8%AE%B0/</url>
