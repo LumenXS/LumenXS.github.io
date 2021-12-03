@@ -576,9 +576,7 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                @RequestParam
-// http://localhost:8080/delete?id=5
-@RequestMapping(value = "/delete",method = {RequestMethod.GET,Request
+                                @RequestParam 和 @PathVariable注解是用于从request中接收请求的，两个都可以接收参数，关键点不同的是@RequestParam是request里面拿取值，而 @PathVariable是从一个URI模板里面来
                             
                         </div>
                         <div class="publish-info">
@@ -740,7 +738,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.3k</span>
+                        class="white-color">9.4k</span>
             
             
             
