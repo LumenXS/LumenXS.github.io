@@ -468,7 +468,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    9.3k
+                    9.5k
                 </div>
                 
 
@@ -1604,6 +1604,54 @@ MYISAM存储引擎下，<span class="token function">COUNT</span><span class="to
     <span class="token keyword">constraint</span> fk_stuinfo_major <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>majorid<span class="token punctuation">)</span> <span class="token keyword">references</span> major<span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#外键</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h4 id="二、修改表时添加约束"><a href="#二、修改表时添加约束" class="headerlink" title="二、修改表时添加约束"></a>二、修改表时添加约束</h4><p><strong>1、添加列级约束</strong><br><strong>alter table 表名 modify column 字段名 字段类型 新约束;</strong><br><strong>2、添加表级约束</strong><br><strong>alter table 表名 add 【constraint 约束名】 约束类型（字段名）【外键的引用;</strong></p>
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> stuinfo<span class="token punctuation">(</span>
+    id <span class="token keyword">int</span><span class="token punctuation">,</span>
+    stuname <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    gender char<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    seat <span class="token keyword">int</span><span class="token punctuation">,</span>
+    age <span class="token keyword">int</span><span class="token punctuation">,</span>
+    majorid <span class="token keyword">int</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">desc</span> stuinfo
+<span class="token comment" spellcheck="true">#1.添加非空约束</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> stuname <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">not</span> <span class="token boolean">null</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#2.添加默认约束</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> age <span class="token keyword">int</span> <span class="token keyword">default</span> <span class="token number">18</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#3.添加主键约束</span>
+<span class="token comment" spellcheck="true">#①列级约束</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">#②表级约束</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">add</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#4.添加唯一</span>
+<span class="token comment" spellcheck="true">#①列级约束</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> seat <span class="token keyword">int</span> <span class="token keyword">unique</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">#②表级约束</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">add</span> <span class="token keyword">unique</span><span class="token punctuation">(</span>seat<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#5.添加外键</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">add</span> <span class="token keyword">constraint</span> fk_stuinfo_major <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>majorid<span class="token punctuation">)</span> <span class="token keyword">references</span> major<span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="三、修改表时删除约束"><a href="#三、修改表时删除约束" class="headerlink" title="三、修改表时删除约束"></a>三、修改表时删除约束</h4><pre class=" language-sql"><code class="language-sql"><span class="token keyword">show</span> <span class="token keyword">index</span> <span class="token keyword">from</span> stuinfo
+<span class="token keyword">desc</span> stuinfo
+<span class="token comment" spellcheck="true">#1.删除非空约束</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> stuname <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token boolean">null</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#2.删除默认约束</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">modify</span> <span class="token keyword">column</span> age <span class="token keyword">int</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#3.删除主键约束</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">drop</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#4.删除唯一</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">drop</span> <span class="token keyword">index</span> seat<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">#5.删除外键</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> stuinfo <span class="token keyword">drop</span> <span class="token keyword">foreign</span> <span class="token keyword">key</span> fk_stuinfo_major<span class="token punctuation">;</span><span class="token comment" spellcheck="true">#</span>
+</code></pre>
 
                 
             </div>
@@ -2400,7 +2448,7 @@ MYISAM存储引擎下，<span class="token function">COUNT</span><span class="to
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.9k</span>
+                        class="white-color">10.1k</span>
             
             
             
