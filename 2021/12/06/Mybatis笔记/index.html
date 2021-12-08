@@ -461,7 +461,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    327
+                    356
                 </div>
                 
 
@@ -487,7 +487,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
 </code></pre>
 <p><strong>在启动类上加注解 @MapperScan 指明 mapper 类的位置</strong></p>
-<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@MapperScan</span><span class="token punctuation">(</span><span class="token string">"com.yc.mybatis"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//扫描mapper</span>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@MapperScan</span><span class="token punctuation">(</span><span class="token string">"com.yc.mybatis.dao"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//扫描mapper   与dao层的@Mapper二选一写上即可(主要作用是扫包)</span>
 <span class="token annotation punctuation">@SpringBootApplication</span><span class="token comment" spellcheck="true">//springboot启动</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MybatisApplication</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -524,7 +524,8 @@
 </code></pre>
 <p>二、基于xml</p>
 <p>1.dao</p>
-<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Repository</span>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Mapper</span>  <span class="token comment" spellcheck="true">//说明这是一个mapper类</span>
+<span class="token annotation punctuation">@Repository</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">StuinfoDAO</span> <span class="token punctuation">{</span>
      <span class="token comment" spellcheck="true">//根据id查找</span>
     Stuinfo <span class="token function">getStuinfo</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1060,18 +1061,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/06/Mybatis%E7%AC%94%E8%AE%B0/">
+                <a href="/2021/12/06/%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6PageHelper/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="SpringBoot整合Mybatis">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="分页插件PageHelper">
                         
-                        <span class="card-title">SpringBoot整合Mybatis</span>
+                        <span class="card-title">分页插件PageHelper</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1081,9 +1081,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1092,12 +1092,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mybatis/">
-                        <span class="chip bg-color">mybatis</span>
+                    <a href="/tags/%E5%88%86%E9%A1%B5/">
+                        <span class="chip bg-color">分页</span>
                     </a>
                     
                 </div>
@@ -1350,7 +1349,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.7k</span>
+                        class="white-color">9.9k</span>
             
             
             
